@@ -27,7 +27,6 @@ This is a reqository for EIE4512 Digital Imagine Processing final project of CUH
     前端部分（Goal） + Reference  
   黄宇航  
     Introduction + Datasets （数据集就是图片来源之类的）  
-
   参考：  
     Proposal文档: example_proposal (please use the provided template and follow this one to write your proposal)  
     PPT自己完成自己的部分，模板是群里发的PPT 
