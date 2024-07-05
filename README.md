@@ -7,9 +7,10 @@ This is a reqository for EIE4512 Digital Imagine Processing final project of CUH
   黄羿玮 2 前端部分（Goal） + 5 Reference  
   黄宇航 1 Introduction + 3 Datasets （数据集就是图片来源之类的） 
   参考：  
-    Proposal文档: 
+    Proposal文档:  *需要改进的：1. Datasets需要添加说明“使用收集来的十岁以内少儿样本训练数据集” ；GUI部分需要添加 “会做得更卡哇伊一点以适应少儿要求”*
     https://docs.qq.com/doc/DRmtKdE56ZXNWdkZp  
     PPT自己完成自己的部分，模板是群里发的PPT
+
    2. 其余分工 待定
 
 2. 时间线：
