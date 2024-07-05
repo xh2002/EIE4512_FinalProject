@@ -16,6 +16,12 @@ This is a reqository for EIE4512 Digital Imagine Processing final project of CUH
 2. 时间线：
    6月23号：组队
    6月26号：10点在TD3楼开会，定标题、分工
+   7月3号：Proposal PPT
+   7月7号中午12点：Proposal本体
+   7月21号：前端、后端分别完成
+   7月28号：Final Presentation 的 PPT和Report
+   7月30号：上交作业
+
 
 3. 主题选择：
   KNN算法实现手写数字识别 <br>
