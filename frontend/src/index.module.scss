@@ -3,7 +3,47 @@
   height: 100vh;
   display: flex;
   padding: 24px;
-  box-sizing: border-box;
   column-gap: 24px;
   overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+
+  .left {
+    flex: 2;
+    min-width: 0;
+  }
+
+  .right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+
+    .upload-card {
+      flex: 1;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      row-gap: 24px;
+      justify-content: space-between;
+
+      .buttons {
+        display: flex;
+        justify-content: end;
+        column-gap: 12px;
+
+        .button {
+          padding-inline: 16px;
+          padding-block: 6px;
+          border: 1px solid rgb(220, 220, 220);
+          border-radius: 6px;
+          background-color: transparent;
+          cursor: pointer;
+
+          &:hover {
+            background-color: rgba(0, 0, 0, 0.06);
+          }
+        }
+      }
+    }
+  }
 }
