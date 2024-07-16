@@ -7,7 +7,7 @@ import to from "await-to-js";
 
 const App = () => {
   const [result, setResult] = useState<number>();
-  const [image, setImage] = useState<File>();
+  const [uploadImage, setUploadImage] = useState<File>();
 
   const writingPad = useRef<WritingPadRef>(null);
 
@@ -15,7 +15,7 @@ const App = () => {
     if (!writingPad.current) {
       return;
     }
-    setImage(undefined);
+    setUploadImage(undefined);
     writingPad.current.clearPad();
   };
 
@@ -23,14 +23,26 @@ const App = () => {
     if (!writingPad.current) {
       return;
     }
-    const [err, res] = await to(writingPad.current.getImage());
+    const [err, handwrittenImage] = await to(writingPad.current.getImage());
     if (err) {
       return;
     }
-    console.log("手写板图片", res);
-    console.log("上传图片", image);
-    // TODO: 调后端拿结果
-    setResult(Math.floor(Math.random() * 10));
+    const formData = new FormData();
+    formData.append("image", uploadImage ?? handwrittenImage);
+    const [fetchErr, res] = await to(
+      fetch("http://localhost:8000/api", {
+        method: "POST",
+        body: formData,
+      })
+    );
+    if (fetchErr) {
+      return;
+    }
+    const [jsonErr, json] = await to(res.json());
+    if (jsonErr) {
+      return;
+    }
+    setResult(json.output);
   };
 
   return (
@@ -40,7 +52,7 @@ const App = () => {
       </Card>
       <div className={styles.right}>
         <Card className={styles["upload-card"]}>
-          <ImageUpload image={image} setImage={setImage} />
+          <ImageUpload image={uploadImage} setImage={setUploadImage} />
           <div className={styles.buttons}>
             <button className={styles.button} onClick={handleClear}>
               Clear
