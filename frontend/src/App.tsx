@@ -6,6 +6,7 @@ import styles from "./index.module.scss";
 import to from "await-to-js";
 
 const App = () => {
+  const [loading, setLoading] = useState<boolean>(false);
   const [result, setResult] = useState<number>();
   const [uploadImage, setUploadImage] = useState<File>();
 
@@ -20,29 +21,33 @@ const App = () => {
   };
 
   const handleSubmit = async () => {
-    if (!writingPad.current) {
-      return;
-    }
-    const [err, handwrittenImage] = await to(writingPad.current.getImage());
-    if (err) {
-      return;
-    }
-    const formData = new FormData();
-    formData.append("image", uploadImage ?? handwrittenImage);
-    const [fetchErr, res] = await to(
-      fetch("http://localhost:8000/api", {
-        method: "POST",
-        body: formData,
-      })
-    );
-    if (fetchErr) {
-      return;
-    }
-    const [jsonErr, json] = await to(res.json());
-    if (jsonErr) {
-      return;
-    }
-    setResult(json.output);
+    setLoading(true);
+    await (async () => {
+      if (!writingPad.current) {
+        return;
+      }
+      const [err, handwrittenImage] = await to(writingPad.current.getImage());
+      if (err) {
+        return;
+      }
+      const formData = new FormData();
+      formData.append("image", uploadImage ?? handwrittenImage);
+      const [fetchErr, res] = await to(
+        fetch("http://localhost:8000/api", {
+          method: "POST",
+          body: formData,
+        })
+      );
+      if (fetchErr) {
+        return;
+      }
+      const [jsonErr, json] = await to(res.json());
+      if (jsonErr) {
+        return;
+      }
+      setResult(json.output);
+    })();
+    setLoading(false);
   };
 
   return (
@@ -64,6 +69,7 @@ const App = () => {
         </Card>
         <Card>Result: {result}</Card>
       </div>
+      {loading && <div className={styles.loading}>Loading...</div>}
     </div>
   );
 };

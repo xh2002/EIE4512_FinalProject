@@ -46,4 +46,16 @@
       }
     }
   }
+
+  .loading {
+    position: fixed;
+    inset: 0;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+  }
 }
