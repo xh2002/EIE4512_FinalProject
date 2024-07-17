@@ -33,7 +33,7 @@ const App = () => {
       const formData = new FormData();
       formData.append("image", uploadImage ?? handwrittenImage);
       const [fetchErr, res] = await to(
-        fetch("http://localhost:8000/api", {
+        fetch("/api", {
           method: "POST",
           body: formData,
         })

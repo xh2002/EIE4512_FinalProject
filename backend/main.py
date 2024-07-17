@@ -1,6 +1,7 @@
 from http.server import BaseHTTPRequestHandler, HTTPServer
 from cgi import FieldStorage
 from json import dumps
+from mimetypes import guess_type
 
 def evaluate_image_to_number(image):
     # TODO: 完成这个函数，将前端传来的image图片文件上的数字/算式识别并返回给前端
@@ -10,6 +11,13 @@ def evaluate_image_to_number(image):
     return 1
 
 class RequestHandler(BaseHTTPRequestHandler):
+    def do_GET(self):
+        file_path = 'public' + self.path
+        with open(file_path, 'rb') as file:
+            self.send_response(200)
+            self.send_header('Content-Type', guess_type(file_path)[0])
+            self.end_headers()
+            self.wfile.write(file.read())
     def do_POST(self):
         if self.path == '/api':
             form = FieldStorage(
@@ -20,7 +28,7 @@ class RequestHandler(BaseHTTPRequestHandler):
             image = form['image'].file
             number = evaluate_image_to_number(image)
             self.send_response(200)
-            self.send_header('Access-Control-Allow-Origin', '*')
+            self.send_header('Content-Type', 'application/json')
             self.end_headers()
             self.wfile.write(dumps({'output': number}).encode('utf-8'))
 
