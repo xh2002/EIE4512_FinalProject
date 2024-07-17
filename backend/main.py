@@ -12,7 +12,7 @@ def evaluate_image_to_number(image):
 
 class RequestHandler(BaseHTTPRequestHandler):
     def do_GET(self):
-        file_path = 'public' + self.path
+        file_path = 'public' + ('/index.html' if self.path == '/' else self.path)
         with open(file_path, 'rb') as file:
             self.send_response(200)
             self.send_header('Content-Type', guess_type(file_path)[0])
