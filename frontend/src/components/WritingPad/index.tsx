@@ -43,7 +43,7 @@ const WritingPad = forwardRef<WritingPadRef, unknown>((_, ref) => {
     }
     context.current.beginPath();
     context.current.moveTo(position.current.x, position.current.y);
-    context.current.lineWidth = 3;
+    context.current.lineWidth = 10;
     context.current.lineCap = "round";
     position.current.x = e.clientX - rect.current.x;
     position.current.y = e.clientY - rect.current.y;
