@@ -116,7 +116,7 @@ def getContours(img):
 
 
 
-img = cv2.imread("input.png",cv2.IMREAD_COLOR)
+img = cv2.imread("input.jpg",cv2.IMREAD_COLOR)
 resized_img = cv2.resize(img, (widthImg, heightImg))
 # cv2.imshow('Resized Image', resized_img)
 # plt.show()
