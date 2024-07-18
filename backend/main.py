@@ -7,12 +7,13 @@ from os import path
 dir_path = path.dirname(path.realpath(__file__))
 port = 8000
 
-def evaluate_image_to_number(image):
-    # TODO: 完成这个函数，将前端传来的image图片文件上的数字/算式识别并返回给前端
-    # 下面是样例代码，会把image保存到本地input.png文件中并固定返回1
-    with open(dir_path + '/input.png', 'wb') as file:
-        file.write(image.read())
-    return 1
+def evaluate(input):
+    # TODO: 完成这个函数，将前端传来的input图片识别并返回output图片
+    # 下面是样例代码，会把input图片保存到本地input.png文件中并直接把文件再返回回去
+    file_path = dir_path + '/input.png'
+    with open(file_path, 'wb') as file:
+        file.write(input.read())
+        return open(file_path, 'rb')
 
 class RequestHandler(BaseHTTPRequestHandler):
     def do_GET(self):
@@ -23,18 +24,19 @@ class RequestHandler(BaseHTTPRequestHandler):
             self.end_headers()
             self.wfile.write(file.read())
     def do_POST(self):
-        if self.path == '/api':
+        if self.path == '/api/evaluate':
             form = FieldStorage(
                 fp=self.rfile,
                 headers=self.headers,
                 environ={'REQUEST_METHOD': 'POST'}
             )
-            image = form['image'].file
-            number = evaluate_image_to_number(image)
+            input = form['input'].file
+            output = evaluate(input)
             self.send_response(200)
-            self.send_header('Content-Type', 'application/json')
+            self.send_header('Content-Type', 'image/png')
             self.end_headers()
-            self.wfile.write(dumps({'output': number}).encode('utf-8'))
+            self.wfile.write(output.read())
+            output.close()
 
 if __name__ == '__main__':
     httpd = HTTPServer(('localhost', port), RequestHandler)

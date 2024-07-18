@@ -45,6 +45,14 @@
         }
       }
     }
+
+    .output-card {
+      flex: 1;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      row-gap: 24px;
+    }
   }
 
   .loading {

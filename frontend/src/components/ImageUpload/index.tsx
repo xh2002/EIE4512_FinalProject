@@ -1,12 +1,12 @@
+import classnames from "classnames";
 import {
   ChangeEventHandler,
   DragEventHandler,
-  useMemo,
   useRef,
-  useState,
+  useState
 } from "react";
+import Image from "../Image";
 import styles from "./index.module.scss";
-import classnames from "classnames";
 
 interface ImageUploadProps {
   image: File | undefined;
@@ -17,11 +17,6 @@ const ImageUpload = ({ image, setImage }: ImageUploadProps) => {
   const input = useRef<HTMLInputElement>(null);
 
   const [isDragOver, setIsDragOver] = useState<boolean>(false);
-
-  const imageUrl = useMemo(
-    () => (image ? URL.createObjectURL(image) : undefined),
-    [image]
-  );
 
   const handleClick = () => {
     input.current?.click();
@@ -71,7 +66,7 @@ const ImageUpload = ({ image, setImage }: ImageUploadProps) => {
       >
         <span>Click or drag image here to upload</span>
       </div>
-      {image && <img className={styles.image} src={imageUrl} />}
+      <Image file={image} />
       <input
         ref={input}
         className={styles["file-input"]}

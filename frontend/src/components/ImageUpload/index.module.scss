@@ -6,8 +6,8 @@
 
   .drag-area {
     flex-shrink: 0;
-    height: 300px;
-    padding: 16px;
+    padding-inline: 16px;
+    padding-block: 80px;
     border-radius: 6px;
     background-color: rgba(0, 0, 0, 0.02);
     border: 1px dashed rgb(220, 220, 220);
@@ -21,15 +21,6 @@
     &.drag-over {
       background-color: rgba(0, 0, 0, 0.06);
     }
-  }
-
-  .image {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-    min-height: 0;
-    background-color: rgba(0, 0, 0, 0.02);
-    border-radius: 6px;
   }
 
   .file-input {
