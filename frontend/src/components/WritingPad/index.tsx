@@ -30,6 +30,7 @@ const WritingPad = forwardRef<WritingPadRef, unknown>((_, ref) => {
     bottom: 0,
     toJSON: () => {},
   });
+  const inited = useRef<boolean>(false);
 
   const handleMouseDown: MouseEventHandler<HTMLCanvasElement> = (e) => {
     isWriting.current = true;
@@ -55,6 +56,14 @@ const WritingPad = forwardRef<WritingPadRef, unknown>((_, ref) => {
     isWriting.current = false;
   };
 
+  const clearPad = () => {
+    if (!context.current) {
+      return;
+    }
+    context.current.fillStyle = 'white';
+    context.current.fillRect(0, 0, rect.current.width, rect.current.height);
+  };
+
   useEffect(() => {
     if (!canvas.current) {
       return;
@@ -76,17 +85,24 @@ const WritingPad = forwardRef<WritingPadRef, unknown>((_, ref) => {
           return;
         }
         rect.current = entries[0].target.getBoundingClientRect();
-        const _canvas = document.createElement("canvas");
-        _canvas.width = canvas.current.width;
-        _canvas.height = canvas.current.height;
-        _canvas.getContext("2d")?.drawImage(canvas.current, 0, 0);
-        const scaleX = rect.current.width / canvas.current.width;
-        const scaleY = rect.current.height / canvas.current.height;
-        canvas.current.width = rect.current.width;
-        canvas.current.height = rect.current.height;
-        context.current.scale(scaleX, scaleY);
-        context.current.drawImage(_canvas, 0, 0);
-        context.current.scale(1 / scaleX, 1 / scaleY);
+        if (!inited.current) {
+          inited.current = true;
+          canvas.current.width = rect.current.width;
+          canvas.current.height = rect.current.height;
+          clearPad();
+        } else {
+          const _canvas = document.createElement("canvas");
+          _canvas.width = canvas.current.width;
+          _canvas.height = canvas.current.height;
+          _canvas.getContext("2d")?.drawImage(canvas.current, 0, 0);
+          const scaleX = rect.current.width / canvas.current.width;
+          const scaleY = rect.current.height / canvas.current.height;
+          canvas.current.width = rect.current.width;
+          canvas.current.height = rect.current.height;
+          context.current.scale(scaleX, scaleY);
+          context.current.drawImage(_canvas, 0, 0);
+          context.current.scale(1 / scaleX, 1 / scaleY);
+        }
       }, 300)
     );
     observer.observe(div.current);
@@ -108,12 +124,7 @@ const WritingPad = forwardRef<WritingPadRef, unknown>((_, ref) => {
           resolve(new File([blob], "image.png", { type: "image/png" }));
         });
       }),
-    clearPad: () => {
-      if (!context.current) {
-        return;
-      }
-      context.current.clearRect(0, 0, rect.current.width, rect.current.height);
-    },
+    clearPad,
   }));
 
   return (
