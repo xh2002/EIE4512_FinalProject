@@ -39,7 +39,50 @@ This is a reqository for EIE4512 Digital Imagine Processing final project of CUH
    需要提供计算范围
    需要把OpenCV的部分讲的详细一点，例如用了什么函数，要在Report里列出。
 
+5. 报告内容：
+  1. 摘要 Abstract
+      - 问题陈述及现有方法缺陷
+      - 提出算法的关键步骤及动机/观察
+      - 实验结果亮点
 
+  2. 引言 Intro
+      - 问题背景及概述
+      - 潜在缺陷或关注点
+      - 动机及图示例子
+      - 提出解决方案及简要说明
+      - 贡献列表及外部链接
+
+  3. 相关工作 Related Work
+      - 相关工作的综述
+      - 现有方法的缺陷
+      - 本文方法的差异点
+
+  4. 提出的算法 Proposed Algorithm
+      - 方法流程图
+      - 子部分详述方法
+      - 使用数学符号及表达
+      - 图表说明
+
+  5. 实验 Experiments
+      - 数据集概述及评估指标
+      - 各组件分析
+      - 与现有方法的性能比较
+      - 超长部分可放入附录
+
+  6. 讨论（可选） Discussions
+
+  7. 准备论文的杂项 Misc for Preparing Your Paper
+      - 图像
+      - 表格
+      - 条目和算法
+      - 引用
+
+  8. 致谢（可选） Acknowledgments
+
+  9. 参考文献 References
+
+  10. 附录 Appendix
+      - 补充材料
 
    
    
