@@ -40,6 +40,8 @@ This is a reqository for EIE4512 Digital Imagine Processing final project of CUH
    需要把OpenCV的部分讲的详细一点，例如用了什么函数，要在Report里列出。
 
 5. 报告内容：
+  文档： 【腾讯文档】Report_draft： 
+    https://docs.qq.com/doc/DRldkREhWZUt3Q0VF?scene=cd2f453f5d367e6f2f02d9e0k4BXs1
   1. 摘要 Abstract
       - 问题陈述及现有方法缺陷
       - 提出算法的关键步骤及动机/观察
