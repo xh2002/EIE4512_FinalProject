@@ -11,24 +11,23 @@ This is a reqository for EIE4512 Digital Imagine Processing final project of CUH
     https://docs.qq.com/doc/DRmtKdE56ZXNWdkZp  
     PPT自己完成自己的部分，模板是群里发的PPT
 
-   2. 其余分工 待定
-
-2. 时间线：
+   2. 其余分工
    6月23号：组队
    6月26号：10点在TD3楼开会，定标题、分工
    7月3号：Proposal PPT
    7月7号中午12点：Proposal本体
-   7月21号：前端、后端分别完成
-   7月28号：Final Presentation 的 PPT和Report
+   7月18号：前端、后端分别完成
+   7月18号：Final Presentation 的 PPT
+   7月29号：报告
    7月30号：上交作业
 
 
-3. 主题选择：
+2. 主题选择：
   KNN算法实现手写数字识别 <br>
   参考：
   https://github.com/HistoneVon/knnDigitalDistinguish
 
-4. 实现：
+3. 实现：
   前端：  
     手写板+输出，针对儿童优化  
   后端：  
@@ -36,7 +35,9 @@ This is a reqository for EIE4512 Digital Imagine Processing final project of CUH
     计算：计算出识别的结果  
     对比：对比手写和正确结果  
   
-
+4. 改进：
+   需要提供计算范围
+   需要把OpenCV的部分讲的详细一点，例如用了什么函数，要在Report里列出。
 
 
 
