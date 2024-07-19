@@ -1,5 +1,9 @@
 # EIE4512_FinalProject
-This is a reqository for EIE4512 Digital Imagine Processing final project of CUHK(SZ). The topic is DNE.
+This is a reqository for EIE4512 Digital Imagine Processing final project of CUHK(SZ). The topic is Handwritten Digit and Signal Recognition for Children.
+
+Simple intro: In today's digital era, labor costs are increasingly expensive, and the digitalization of early childhood education has become an inevitable trend. To save parents and teachers from spending time on simple homework correction, this project aim to design a program that can check children's answers of simple handwritten calculation.
+
+
 
 1. 分工： 
    1. Proposal & PPT 分工 due: 7月3号21点  
