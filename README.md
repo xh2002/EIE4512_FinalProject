@@ -48,9 +48,12 @@ Simple intro: In today's digital era, labor costs are increasingly expensive, an
     https://docs.qq.com/doc/DRldkREhWZUt3Q0VF?scene=cd2f453f5d367e6f2f02d9e0k4BXs1
    包括：
    1摘要 Abstract；2引言 Intro；3相关工作 Related Work；4算法；5实验 Experiments；6准备论文的杂项 Misc for Preparing Your Paper；7参考文献 References；8附录 Appendix
+   
    xbs: 1348
    hyh: 245
    hyw: 467
+
+   
   r1. 摘要 Abstract 
       - 问题陈述及现有方法缺陷
       - 提出算法的关键步骤及动机/观察
