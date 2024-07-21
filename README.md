@@ -46,48 +46,50 @@ Simple intro: In today's digital era, labor costs are increasingly expensive, an
 5. 报告内容：
   文档： 【腾讯文档】Report_draft： 
     https://docs.qq.com/doc/DRldkREhWZUt3Q0VF?scene=cd2f453f5d367e6f2f02d9e0k4BXs1
-  1. 摘要 Abstract
+   包括： 
+  r1. 摘要 Abstract 徐
       - 问题陈述及现有方法缺陷
       - 提出算法的关键步骤及动机/观察
       - 实验结果亮点
 
-  2. 引言 Intro
+  r2. 引言 Intro 黄yh
       - 问题背景及概述
       - 潜在缺陷或关注点
       - 动机及图示例子
       - 提出解决方案及简要说明
       - 贡献列表及外部链接
 
-  3. 相关工作 Related Work
+  r3. 相关工作 Related Work 徐
       - 相关工作的综述
       - 现有方法的缺陷
       - 本文方法的差异点
+      （没有专注于小朋友的）
 
-  4. 提出的算法 Proposed Algorithm
+  r4. 提出的算法 Proposed Algorithm 自己写自己的，黄yh整合
       - 方法流程图
       - 子部分详述方法
       - 使用数学符号及表达
       - 图表说明
 
-  5. 实验 Experiments
+  r5. 实验 Experiments 
       - 数据集概述及评估指标
       - 各组件分析
       - 与现有方法的性能比较
       - 超长部分可放入附录
 
-  6. 讨论（可选） Discussions
+  r6. 讨论（可选） Discussions
 
-  7. 准备论文的杂项 Misc for Preparing Your Paper
+  r7. 准备论文的杂项 Misc for Preparing Your Paper 徐
       - 图像
       - 表格
       - 条目和算法
       - 引用
 
-  8. 致谢（可选） Acknowledgments
+  r8. 致谢（可选） Acknowledgments
 
-  9. 参考文献 References
+  r9. 参考文献 References 黄yw
 
-  10. 附录 Appendix
+  r10. 附录 Appendix 徐
       - 补充材料
 
    
