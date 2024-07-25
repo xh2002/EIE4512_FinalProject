@@ -10,7 +10,7 @@ This is a reqository for EIE4512 Digital Imagine Processing final project of CUH
   * If you want to run the program, following the instruction in "./Code/project/README.md" which posted in github [here](https://github.com/xh2002/EIE4512_FinalProject/blob/master/Code/project/README.md). If you have any questions, please feel free to contact me via github or email: boshixu@link.cuhk.edu.cn.
 
 
-=====================================================================================
+=========================================================================
 
 1. 分工： 
    1. Proposal & PPT 分工 due: 7月3号21点  
