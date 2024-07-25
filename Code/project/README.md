@@ -6,7 +6,7 @@
 * tensorflow 2.17.0rc1  
 * cpu: AMD Ryzen 7 6800H with Radeon Graphics 3.20 GHz  
 
-# Usage
+# Usage:
 * First[Install python](https://www.python.org/downloads/)
 * Compile frontend：`cd frontend && bash build.sh`，then it will be copied to "backend/public" (The uploaded version is compiled)
 * `cd backend && python main.py`
