@@ -5,7 +5,7 @@ Simple intro: In today's digital era, labor costs are increasingly expensive, an
 
 Instructions:
 Please notice that due to the large size of CNN trainning model, github is not able to accept it. Before running the program, you please download CNN_result.h5 from the link below and put this file in "./Code/project/backend".
-  https://cuhko365-my.sharepoint.com/:u:/g/personal/122040075_link_cuhk_edu_cn/Edz4lPUiOQFBgy5NnlrEyoABy87t7d9Z0Oi9ZbqpzYSCkg?e=0ihKHj
+  * https://cuhko365-my.sharepoint.com/:u:/g/personal/122040075_link_cuhk_edu_cn/Edz4lPUiOQFBgy5NnlrEyoABy87t7d9Z0Oi9ZbqpzYSCkg?e=0ihKHj  
 If you want to run the program, run the main file with path: ""./Code/project/backend/main.py". If you have any questions, please feel free to contact me via github or email: boshixu@link.cuhk.edu.cn.
 
 
