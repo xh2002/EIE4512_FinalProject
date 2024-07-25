@@ -7,7 +7,7 @@
 * cpu: AMD Ryzen 7 6800H with Radeon Graphics 3.20 GHz  
 
 # Usage:
-* First[Install python](https://www.python.org/downloads/)
+* First [Install python](https://www.python.org/downloads/)
 * Compile frontend：`cd frontend && bash build.sh`，then it will be copied to "backend/public" (The uploaded version is compiled)
 * `cd backend && python main.py`
 * Open this link in blowser, notice that we recommend using Chrome and Edge. [http://localhost:8000](http://localhost:8000)
