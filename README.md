@@ -5,8 +5,8 @@ This is a reqository for EIE4512 Digital Imagine Processing final project of CUH
 
 
 * Instructions:
-** Please notice that due to the large size of CNN trainning model, github is not able to accept it. Before running the program, you please download CNN_result.h5 from the link below and put this file in "./Code/project/backend".
-  ** [Onedrive link](https://cuhko365-my.sharepoint.com/:u:/g/personal/122040075_link_cuhk_edu_cn/Edz4lPUiOQFBgy5NnlrEyoABy87t7d9Z0Oi9ZbqpzYSCkg?e=0ihKHj)
+  * Please notice that due to the large size of CNN trainning model, github is not able to accept it. Before running the program, you please download CNN_result.h5 from the link below and put this file in "./Code/project/backend".
+   * [Onedrive link](https://cuhko365-my.sharepoint.com/:u:/g/personal/122040075_link_cuhk_edu_cn/Edz4lPUiOQFBgy5NnlrEyoABy87t7d9Z0Oi9ZbqpzYSCkg?e=0ihKHj)
 
 If you want to run the program, following the instruction in "./Code/project/README.md" which posted in github [here](https://github.com/xh2002/EIE4512_FinalProject/blob/master/Code/project/README.md). If you have any questions, please feel free to contact me via github or email: boshixu@link.cuhk.edu.cn.
 
